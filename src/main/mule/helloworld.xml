@@ -13,5 +13,8 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 			<ee:repeatable-file-store-stream />
 		</http:listener>
 		<set-payload value='"Hello World!"' doc:name="Set Payload" doc:id="61a01ce1-f6b4-4174-a2e1-87bada105b28" />
+		<set-payload value='"Hello World-2!"' doc:name="Set Payload" doc:id="f67e1bd5-e301-4c60-bc69-809e6108208a" />
+		<set-payload value='"Hello World-3!"' doc:name="Set Payload" doc:id="2d334067-0d43-4f98-baed-d032168ee986" />
+		<logger level="INFO" doc:name="Logger" doc:id="a3008d52-72fe-45c7-b1d3-cdf9b9c96d56" message="#[payload]"/>
 	</flow>
 </mule>
