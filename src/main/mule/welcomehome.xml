@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="welcomehomeFlow" doc:id="c6b61e6b-783d-4b72-aff6-2a69048faec6" >
+		<http:listener doc:name="Listener" doc:id="de47b856-2f15-4f60-a9e4-da3fb0defc51" config-ref="HTTP_Listener_config" path="/api/test1">
+			<ee:repeatable-file-store-stream />
+		</http:listener>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="cb0eee5f-70be-4e7b-a925-80d645c23847" />
+	</flow>
+</mule>
